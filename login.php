@@ -4,7 +4,7 @@
 
     // Include config file
 
-    require_once 'config.php';
+    require_once 'config.php'; //database connection string file
 
 
 
@@ -104,7 +104,7 @@
 
                                 $_SESSION['username'] = $username;
 
-                                header("location: welcome.php");
+                                header("location: dashboard.php");
 
                             } else{
 
@@ -188,7 +188,7 @@
 
                     <label>Username</label>
 
-                    <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+                    <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
 
                     <span class="help-block"><?php echo $username_err; ?></span>
 
@@ -210,7 +210,8 @@
 
                 </div>
 
-                <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+                <p class="">Forgot Password?</p>
+                <p>Not Registered ? <a href="register.php">Click Here</a></p>
 
             </form>
 

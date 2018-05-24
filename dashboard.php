@@ -46,9 +46,11 @@
 
         <div class="page-header">
 
-            <h1>Hi, <b><?php echo htmlspecialchars($_SESSION['username']); ?></b>Welome to Php Server - login system.</h1>
-  <h4>Successfully created login system.</h4>
+            <h1>Hi, <b><?php echo htmlspecialchars($_SESSION['username']); ?></b> <br>Welome to Php Server - login system.</h1>
         </div>
+
+
+
 
         <p><a href="logout.php" class="btn btn-danger">Sign Out</a></p>
 
