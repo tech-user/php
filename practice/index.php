@@ -1735,7 +1735,7 @@ $ages["Clark"] = "32";
 $ages["John"] = "28";
 
 // Printing array structure
-print_r($ages); 
+print_r($ages);
 ?>
 
 <br>
@@ -1809,7 +1809,7 @@ echo "<br>";
 <?php
 // Define array
 $cities = array("London", "Paris", "New York");
- 
+
 // Display the cities array
 var_dump($cities);
 ?>
@@ -1881,7 +1881,7 @@ print_r($numbers);
 <?php
 // Define array
 $colors = array("Red", "Green", "Blue", "Yellow");
- 
+
 // Sorting and printing array
 rsort($colors);
 print_r($colors);
@@ -1926,9 +1926,9 @@ print_r($age);
 //Define array
 
 $age = array(
-    "Peter"=>20, 
-    "Harry"=>14, 
-    "John"=>45, 
+    "Peter"=>20,
+    "Harry"=>14,
+    "John"=>45,
     "Clark"=>35
 );
 
@@ -2045,7 +2045,7 @@ print_r($age);
 
 $i = 1;
 while ($i <= 3) {
-    
+
     $i++;
 
     echo "The Number is " . $i . "<br>";
@@ -2089,7 +2089,7 @@ while ($i <= 3) {
 <h5>Difference Between while and do…while Loop</h5>
 <p>The <code>while</code> loop differs from the <code>do-while</code> loop in one important way — with a <code>while</code> loop, the condition to be evaluated is tested at the beginning of each loop iteration, so if the conditional expression evaluates to false, the loop will never be executed.</p>
 <p>With a <code>do-while</code> loop, on the other hand, the loop will always be executed once, even if the conditional expression is false, because the condition is evaluated at the end of the loop iteration rather than the beginning.</p>
-                
+
 <br>
 <br>
 <h5>PHP for Loop</h5>
@@ -2118,7 +2118,7 @@ while ($i <= 3) {
 
 <?php
 
-for ($i=1; $i<=5; $i++) { 
+for ($i=1; $i<=5; $i++) {
         echo "The number is " . $i . "<br>";
 }
 
@@ -2130,7 +2130,7 @@ for ($i=1; $i<=5; $i++) {
 
 <h5>PHP foreach Loop</h5>
 <p>The <code>foreach</code> loop is used to iterate over arrays.</p>
- 
+
  <h5 class="example">Syntax</h5>
 
 <p>
@@ -2183,7 +2183,7 @@ $employee = array(
 
 );
 foreach ($employee as $key => $employeevalues) {
-    
+
         echo $key . " : " . $employeevalues . "<br>";
 
 }
@@ -2317,7 +2317,7 @@ function getSum2($num1, $num2){
     $total = $num1 + $num2;
     return $total;
 }
- 
+
 // Printing returned value
 echo getSum2(5, 10); // Outputs: 15
 ?>
@@ -2340,7 +2340,7 @@ function divideNumbers($dividend, $divisor){
 
 list($dividend, $divisor, $quotient) = divideNumbers(10, 2);
 
-echo $dividend . "<br>"; 
+echo $dividend . "<br>";
 echo $divisor . "<br>";
 echo $quotient . "<br>";
 
@@ -2361,10 +2361,10 @@ function selfMultiply(&$number){
     $number *= $number;
     return $number;
 }
- 
+
 $mynum = 5;
 echo $mynum . "<br>"; // Outputs: 5
- 
+
 selfMultiply($mynum);
 echo $mynum; // Outputs: 25
 ?>
@@ -2452,7 +2452,7 @@ function Hello(){
 
 Hello();
 echo "<br>";
-echo $greeting; 
+echo $greeting;
 echo "<br>";
 
 // Assign a new value to variable
@@ -2479,15 +2479,15 @@ echo $greeting;
 function printValues($arr) {
     global $count;
     global $items;
-    
+
     // Check input is an array
     if(!is_array($arr)){
         die("ERROR: Input is not an array");
     }
-    
+
     /*
     Loop through array, if value is itself an array recursively call the function,
-    else add the value found to the output items array, 
+    else add the value found to the output items array,
     and increment counter by 1 for each value found
     */
     foreach($arr as $a){
@@ -2498,11 +2498,11 @@ function printValues($arr) {
             $count++;
         }
     }
-    
+
     // Return total count and values found in array
     return array('total' => $count, 'values' => $items);
 }
- 
+
 // Define nested array
 $species = array(
     "birds" => array(
@@ -2548,7 +2548,7 @@ $species = array(
         )
     )
 );
- 
+
 // Count and print values in nested array
 $result = printValues($species);
 echo $result['total'] . ' value(s) found: '. "<br>" . "<br>";
@@ -2631,7 +2631,7 @@ echo abs(-4.2);             // 0utputs: 4.2 (double/float)
 echo ceil(4.2) . "<br>"; // Outputs : 5
 echo ceil(9.99) . "<br>";   // 0utputs: 10
 echo ceil(-5.18) . "<br><br>";  // 0utputs: -5
- 
+
 // Round fractions down
 echo floor(4.2) . "<br>";    // 0utputs: 4
 echo floor(9.99) . "<br>";   // 0utputs: 9
@@ -2664,7 +2664,7 @@ echo floor(-5.18) . "<br>";  // 0utputs: -6
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 //Generate some random numbers
 
@@ -2692,12 +2692,12 @@ echo rand(1, 10) . "<br>";
 //Convert Decimal to Binary
 
 echo decbin(2) . "<br>"; // Outputs : 10
-echo decbin(12) . "<br>";   // 0utputs: 1100  
+echo decbin(12) . "<br>";   // 0utputs: 1100
 echo decbin(100) . "<br><br>";  // 0utputs: 1100100
- 
+
 // Convert Binary to Decimal
-echo bindec(10) . "<br>";       // 0utputs: 2 
-echo bindec(1100) . "<br>";     // 0utputs: 12  
+echo bindec(10) . "<br>";       // 0utputs: 2
+echo bindec(1100) . "<br>";     // 0utputs: 12
 echo bindec(1100100) . "<br>";  // 0utputs: 100
 ?>
 
@@ -2714,7 +2714,7 @@ echo bindec(1100100) . "<br>";  // 0utputs: 100
 echo dechex(255) . "<br>"; // Outputs : ff
 echo dechex(196) . "<br>";  // 0utputs: c4
 echo dechex(450021) . "<br><br>";    // 0utputs: 0
- 
+
 // Convert hexadecimal to decimal
 echo hexdec('ff') . "<br>";  // 0utputs: 255
 echo hexdec('c4') . "<br>";  // 0utputs: 196
@@ -2731,11 +2731,11 @@ echo hexdec(0) . "<br>";     // 0utputs: 0
 <h5 class="example">Example</h5>
 
 <?php
-// Convert decimal to octal 
+// Convert decimal to octal
 echo decoct(12) . "<br>";   // 0utputs: 14
 echo decoct(256) . "<br>";  // 0utputs: 400
 echo decoct(77) . "<br>";   // 0utputs: 115
- 
+
 // Convert octal to decimal
 echo octdec('14') . "<br>";   // 0utputs: 12
 echo octdec('400') . "<br>";  // 0utputs: 256
@@ -2758,27 +2758,27 @@ echo octdec('105') . "<br>";  // 0utputs: 69
 echo base_convert('12', 10, 2) . "<br>";  // 0utputs: 1100
 // Convert binary to decimal
 echo base_convert('1100', 2, 10) . "<br>";  // 0utputs: 12
- 
+
 // Convert decimal to hexadecimal
 echo base_convert('10889592', 10, 16) . "<br>";  // 0utputs: a62978
 // Convert hexadecimal to decimal
 echo base_convert('a62978', 16, 10) . "<br>";  // 0utputs: 10889592
- 
+
 // Convert decimal to octal
 echo base_convert('82', 10, 8) . "<br>";  // 0utputs: 122
 // Convert octal to decimal
 echo base_convert('122', 8, 10) . "<br>";  // 0utputs: 82
- 
+
 // Convert hexadecimal to octal
 echo base_convert('c2c6a8', 16, 8) . "<br>";  // 0utputs: 60543250
 // Convert octal to hexadecimal
 echo base_convert('60543250', 8, 16) . "<br>";  // 0utputs: c2c6a8
- 
+
 // Convert octal to binary
 echo base_convert('42', 8, 2) . "<br>";  // 0utputs: 100010
 // Convert binary to octal
 echo base_convert('100010', 2, 8) . "<br>";  // 0utputs: 42
- 
+
 // Convert hexadecimal to binary
 echo base_convert('abc', 16, 2) . "<br>";  // 0utputs: 101010111100
 // Convert binary to hexadecimal
@@ -2919,7 +2919,7 @@ if(isset($_REQUEST["name"])){
 <p>The <i>format</i> parameter in the <code>date()</code> function is required which specifies the format of returned date and time. However the timestamp is an optional parameter, if not included then current date and time will be used. </p>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
 //Return current date from the remote server
 
 $today = date("d/m/y");
@@ -2947,7 +2947,7 @@ echo $today;
 <br>
 <h5 class="example">Examples</h5>
 
-<?php 
+<?php
 echo date("d/m/y"). "<br>";
 echo date("D d M Y"). "<br>";
 echo date("d-m-Y"). "<br>";
@@ -2962,7 +2962,7 @@ echo date("d-m-Y"). "<br>";
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 $timestamp = time();
 
@@ -3028,7 +3028,7 @@ echo date('l', mktime(0, 0, 0, 1, 4, 2014));
 <h5 class="example">Example</h5>
 
 
-<?php 
+<?php
 $futuredate = mktime(0, 0, 0, date("m")+30, date("d"), date("Y"));
 echo date("d/m/Y", $futuredate);
 ?>
@@ -3051,7 +3051,7 @@ echo date("d/m/Y", $futuredate);
 
 
 <p>include("<code>path/to/filename</code>"); -Or- include "<code> path/to/filename</code>"; <br>
-require("<code>path/to/filename</code>"); -Or- require "<code>path/to/filename</code>";	
+require("<code>path/to/filename</code>"); -Or- require "<code>path/to/filename</code>";
 </p>
 
 <br>
@@ -3065,6 +3065,7 @@ require("<code>path/to/filename</code>"); -Or- require "<code>path/to/filename</
 <?php include "nav.html"; ?>
 <h5>Welcome to Our Website!</h5>
     <p>Here you will find lots of useful information.</p>
+
 
 <?php include "footer.html" ?>
 
@@ -3098,7 +3099,7 @@ require("<code>path/to/filename</code>"); -Or- require "<code>path/to/filename</
 
 <br>
 
-<?php 
+<?php
 //Include file
 
 require "functions/my_functions.php";
@@ -3132,7 +3133,7 @@ require_once "functions/my_functions.php";
 // Calling the function
 multiplySelf(2); // Output: 4
 echo "<br>";
- 
+
 // Including file once again
 require_once "functions/my_functions.php";
 // Calling the function
@@ -3167,7 +3168,7 @@ multiplySelf(5); // Output: 25
 <h5 class="example">Example</h5>
 
 
-<?php 
+<?php
 $handle = fopen("data.txt", "r") or die (" Error : Cannont open the file");
 
 if ($handle) {
@@ -3260,16 +3261,16 @@ $handle = fopen($file, "r");
 
 <?php
 $file = "data.txt";
- 
+
 // Check the existence of file
 if(file_exists($file)){
     // Open the file for reading
     $handle = fopen($file, "r") or die("ERROR: Cannot open the file.");
-    
+
      echo "File Opened Success<br>";
 
     /* Some code to be executed */
-        
+
     // Closing the file handle
     fclose($handle);
 
@@ -3294,7 +3295,7 @@ if(file_exists($file)){
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
         $file = "data.txt";
 
         //Check the existence of file
@@ -3332,7 +3333,7 @@ if(file_exists($file)){
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
         $file = "data.txt";
 
         //Check the existence of file
@@ -3372,7 +3373,7 @@ if(file_exists($file)){
 <h5 class="example">Example</h5>
 
 
-<?php 
+<?php
 $file = "data.txt";
 
 //Check the file exists
@@ -3397,7 +3398,7 @@ if (file_exists($file)) {
 <h5 class="example">Example</h5>
 
 
-<?php 
+<?php
 
 $file = "data.txt";
 
@@ -3459,7 +3460,7 @@ if (file_exists($file)) {
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 $file = "note.txt";
 
 // String of data to be written
@@ -3487,7 +3488,7 @@ echo "Data written to the file successfully.";
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 $file = "note.txt";
 
@@ -3516,13 +3517,13 @@ echo "Data written to the file successfully."
 
 <?php
 $file = "note.txt";
-    
+
 // String of data to be written
 $data = "The quick brown fox jumps over the lazyy.";
-    
+
 // Write data to the file
 file_put_contents($file, $data, FILE_APPEND) or die("ERROR: Cannot write the file.");
-    
+
 echo "Data written to the file successfully.";
 ?>
 
@@ -3537,7 +3538,7 @@ echo "Data written to the file successfully.";
 
 <!-- <?php
 $file = "note.txt";
- 
+
 // Check the existence of file
 if(file_exists($file)){
     // Attempt to rename the file
@@ -3562,7 +3563,7 @@ if(file_exists($file)){
 
 <!-- <?php
 $file = "file.txt";
- 
+
 // Check the existence of file
 if(file_exists($file)){
     // Attempt to delete the file
@@ -3650,7 +3651,7 @@ if(file_exists($file)){
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 $dir = "newfolder";
 
@@ -3682,7 +3683,7 @@ if (!file_exists($dir)) {
 <p>You can copy a file from one location to another by calling PHP <code>copy()</code> function with the file's source and destination paths as arguments. If the destination file already exists it'll be overwritten. Here's an example which creates a copy of "example.txt" file inside backup folder.</p>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
     // Source file path
     $file = "test.txt";
 
@@ -3722,10 +3723,10 @@ function outputFiles($path){
     if(file_exists($path) && is_dir($path)){
         // Scan the files in this directory
         $result = scandir($path);
-        
+
         // Filter out the current (.) and parent (..) directories
         $files = array_diff($result, array('.', '..'));
-        
+
         if(count($files) > 0){
             // Loop through retuned array
             foreach($files as $file){
@@ -3744,7 +3745,7 @@ function outputFiles($path){
         echo "ERROR: The directory does not exist.";
     }
 }
- 
+
 // Call the function
 outputFiles("newfolder");
 ?>
@@ -3761,9 +3762,9 @@ outputFiles("newfolder");
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
-/* Search the directory and loop through returned array 
+/* Search the directory and loop through returned array
 containing the matched files */
 
 foreach (glob("newfolder/*.txt") as $file) {
@@ -3807,7 +3808,7 @@ function outputFile($path){
         echo "ERROR: The directory does not exist.";
     }
 }
- 
+
 // Call the function
 outputFile("newfolder");
 ?>
@@ -3854,30 +3855,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $filename = $_FILES["photo"]["name"];
         $filetype = $_FILES["photo"]["type"];
         $filesize = $_FILES["photo"]["size"];
-    
+
 
         // Verify file extension
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
         if(!array_key_exists($ext, $allowed)) die("Error: Please select a valid file format.");
-    
+
 
         // Verify file size - 5MB maximum
         $maxsize = 5 * 1024 * 1024;
         if($filesize > $maxsize) die("Error: File size is larger than the allowed limit.");
-    
+
 
         // Verify MYME type of the file
         if(in_array($filetype, $allowed)){
-           
+
             // Check whether file exists before uploading it
             if(file_exists("upload/" . $filename)){
                 echo $filename . " is already exists.";
             } else{
                 move_uploaded_file($_FILES["photo"]["tmp_name"], "upload/" . $filename);
                 echo "Your file was uploaded successfully.";
-            } 
+            }
         } else{
-            echo "Error: There was a problem uploading your file. Please try again."; 
+            echo "Error: There was a problem uploading your file. Please try again.";
         }
     } else{
         echo "Error: " . $_FILES["photo"]["error"];
@@ -3902,12 +3903,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <li><code>$_FILES["photo"]["tmp_name"]</code> — This array value specifies the temporary name including full path that is assigned to the file once it has been uploaded to the server.</li>
         <li><code>$_FILES["photo"]["error"]</code> — This array value specifies error or status code associated with the file upload, e.g. it will be 0, if there is no error.</li>
     </ul>
-    
+
 <p>The PHP code in the following example will simply display the details of the uploaded file and stores it in a temporary directory on the web server.</p>
-               
+
 <br>
 
-<?php 
+<?php
 
 if ($_FILES["photo"]["error"] > 0) {
         echo "Error: " . $_FILES["photo"]["error"] . "<br>";
@@ -4014,7 +4015,7 @@ if ($_FILES["photo"]["error"] > 0) {
                         <tr>
                         	<td><code>expires</code></td>
                         	<td>The expiry date in UNIX timestamp format. After this time cookie will become inaccessible. The default value is 0.</td>
-                        </tr>			    
+                        </tr>
                         <tr>
                         	<td><code>path</code></td>
                         	<td>Specify the path on the server for which the cookie will be available. If set to <code>/</code>, the cookie will be available within the entire domain.</td>
@@ -4038,7 +4039,7 @@ if ($_FILES["photo"]["error"] > 0) {
 
 <p>Here's an example that uses <code>setcookie()</code> function to create a cookie named username and assign the value value <code>John Carter</code> to it. It also specify that the cookie will expire after 30 days <code>(30 days * 24 hours * 60 min * 60 sec)</code>.</p>
 
-<?php  
+<?php
 
 // Setting a cookie
 
@@ -4052,7 +4053,7 @@ setcookie("username", "John Carter", time()+30*24*60*60);
 <p>The PHP <code>$_COOKIE</code> superglobal variable is used to retrieve a cookie value. It typically an associative array that contains a list of all the cookies values sent by the browser in the current request, keyed by cookie name. The individual cookie value can be accessed using standard array notation, for example to display the username cookie set in the previous example, you could use the following code.</p>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
     // Accessing an individual cookie value
 
     echo $_COOKIE["username"];
@@ -4065,7 +4066,7 @@ setcookie("username", "John Carter", time()+30*24*60*60);
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 //Verifying whether a cookie is set or not
 
     if(isset($_COOKIE["username"])){
@@ -4129,7 +4130,7 @@ setcookie("username", "", time()-3600);
 
 <h5 class="example">Example</h5>
 
-<!-- <?php  
+<!-- <?php
 // Starting session
 
 session_start();
@@ -4148,7 +4149,7 @@ session_start();
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 // Starting session
 
 session_start();
@@ -4173,7 +4174,7 @@ echo 'Hi, ' . $_SESSION["firstname"] .  ' ' . $_SESSION["secondname"];
 <p>If you want to remove certain session data, simply unset the corresponding key of the <code>$_SESSION</code> associative array, as shown in the following example:</p>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
 // Starting session
 
 session_start();
@@ -4201,7 +4202,7 @@ echo $_SESSION["firstname"] . ' ' . $_SESSION["lastname"];
 <p>However, to destroy a session completely, simply call the <code>session_destroy()</code> function. This function does not need any argument and a single call destroys all the session data.</p>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
 //Session start
 
 session_start();
@@ -4308,22 +4309,22 @@ if (mail($to, $subject, $message)) {
 $to = 'ganeshvadla@email.com';
 $subject = 'Marriage Proposal';
 $from = 'tech@tppl.news';
- 
+
 // To send HTML mail, the Content-type header must be set
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
- 
+
 // Create email headers
 $headers .= 'From: '.$from."\r\n".
     'Reply-To: '.$from."\r\n" .
     'X-Mailer: PHP/' . phpversion();
- 
+
 // Compose a simple HTML email message
 $message = '<html><body>';
 $message .= '<h1 style="color:#f40;">Hi Jane!</h1>';
 $message .= '<p style="color:#080;font-size:18px;">Will you marry me?</p>';
 $message .= '</body></html>';
- 
+
 // Sending email
 if(mail($to, $subject, $message, $headers)){
     echo 'Your mail has been sent successfully.';
@@ -4437,7 +4438,7 @@ if(mail($to, $subject, $message, $headers)){
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 //Sample user comment
 
@@ -4459,7 +4460,7 @@ echo $sanitizedComment;
 <h5>Validate Integer Values</h5>
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 // Sample integer value
 
 $int = 20;
@@ -4485,7 +4486,7 @@ if (filter_var($int, FILTER_VALIDATE_INT)) {
 <?php
 // Sample integer value
 $int = 0;
- 
+
 // Validate sample integer value
 if(filter_var($int, FILTER_VALIDATE_INT) === 0 || filter_var($int, FILTER_VALIDATE_INT)){
     echo "The <b>$int</b> is a valid integer";
@@ -4502,7 +4503,7 @@ if(filter_var($int, FILTER_VALIDATE_INT) === 0 || filter_var($int, FILTER_VALIDA
 <?php
 // Sample IP address
 $ip = "172.16.254.1";
- 
+
 // Validate sample IP address
 if(filter_var($ip, FILTER_VALIDATE_IP)){
     echo "The <b>$ip</b> is a valid IP address";
@@ -4519,7 +4520,7 @@ if(filter_var($ip, FILTER_VALIDATE_IP)){
 <?php
 // Sample IP address
 $ip = "172.16.254.1";
- 
+
 // Validate sample IP address
 if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)){
     echo "The <b>$ip</b> is a valid IPV6 address";
@@ -4535,7 +4536,7 @@ if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)){
 <h5>Sanitize and Validate Email Addresses</h5>
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 // Sample email address
 
 $email = "some@@example.com";
@@ -4566,10 +4567,10 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 <?php
 // Sample website url
 $url = "http:://wwww.example.com";
- 
+
 // Remove all illegal characters from url
 $url = filter_var($url, FILTER_SANITIZE_URL);
- 
+
 // Validate website url
 if(filter_var($url, FILTER_VALIDATE_URL)){
     echo "The <b>$url</b> is a valid website url";
@@ -4588,7 +4589,7 @@ if(filter_var($url, FILTER_VALIDATE_URL)){
 <?php
 // Sample website url
 $url = "http://www.example.com?topic=filters";
- 
+
 // Validate website url for query string
 if(filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED)){
     echo "The <b>$url</b> contains query string";
@@ -4606,9 +4607,9 @@ if(filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_QUERY_REQUIRED)){
 <?php
 // Sample integer value
 $int = 52;
- 
+
 // Validate sample integer value
-if(filter_var($int, FILTER_VALIDATE_INT, 
+if(filter_var($int, FILTER_VALIDATE_INT,
             array(
                 "options" => array(
                     "min_range" => 0,
@@ -4704,7 +4705,7 @@ if(filter_var($int, FILTER_VALIDATE_INT,
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 // Try to open a non-existent file
 
@@ -4718,7 +4719,7 @@ $file = fopen("test.txt", "r");
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 if (file_exists("test.txt")) {
         $file = fopen("test.txt", "r");
 } else{
@@ -4776,7 +4777,7 @@ if (file_exists("test.txt")) {
                 </div>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
 // Error handler function
 
 function customError($errno, $errstr){
@@ -4817,7 +4818,7 @@ function customError2($errno, $errstr, $errfile, $errline, $errcontext){
     $message = date("Y-m-d H:i:s - ");
     $message .= "Error: [" . $errno ."], " . "$errstr in $errfile on line $errline, ";
     $message .= "Variables:" . print_r($errcontext, true) . "\r\n";
-    
+
     error_log($message, 3, "logs/app_errors.log");
     die("There was a problem, please try again.");
 }
@@ -4847,7 +4848,7 @@ function customError3($errno, $errstr, $errfile, $errline, $errcontext){
     $message = date("Y-m-d H:i:s - ");
     $message .= "Error: [" . $errno ."], " . "$errstr in $errfile on line $errline, ";
     $message .= "Variables:" . print_r($errcontext, true) . "\r\n";
-    
+
     error_log($message, 1, "tech@tppl.news");
     die("There was a problem, please try again. Error report submitted to webmaster.");
 }
@@ -4887,7 +4888,7 @@ echo calcDivision4(10, 0);
 <p>This message doesn't look very informative. Consider the following example that uses the <code>trigger_error()</code> function to generate the error.</p>
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 function calcDivision5($dividend, $divisor){
         if ($divisor == 0) {
             trigger_error("The divisor cannot be zero", E_USER_WARNING);
@@ -4939,12 +4940,12 @@ class RectangleF
     // Declare  properties
     public $length = 0;
     public $width = 0;
-    
+
     // Method to get the perimeter
     public function getPerimeter(){
         return (2 * ($this->length + $this->width));
     }
-    
+
     // Method to get the area
     public function getArea(){
         return ($this->length * $this->width);
@@ -5009,7 +5010,7 @@ echo $obj->getArea();
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 class TestClass
 {
@@ -5017,7 +5018,7 @@ class TestClass
         public function __construct(){
             echo 'The class " ' . __CLASS__ .'" was initiated! <br>';
         }
-    
+
         // Destructor
         public function __destruct()
         {
@@ -5045,7 +5046,7 @@ echo "The end of the file is reached.";
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 class TestClass2
 {
@@ -5053,7 +5054,7 @@ class TestClass2
         public function __construct(){
             echo 'The class " ' . __CLASS__ .'" was initiated! <br>';
         }
-    
+
         // Destructor
         public function __destruct()
         {
@@ -5118,14 +5119,14 @@ echo "The end of the file is reached.";
 <h5>Static Properties and Methods</h5>
 <p>In addition to the visibility, properties and methods can also be declared as <code>static</code>, which makes them accessible without needing an instantiation of the class. Static properties and methods can be accessed using the scope resolution operator (<code>::</code>), like this: <code>ClassName::$property</code> and <code>ClassName::method()</code>.</p>
 				<p>A property declared as static cannot be accessed via the object of that class though a static method can be, as demonstrated in the following example:</p>
-        
-        
+
+
 <h5 class="example">Example</h5>
-<?php 
+<?php
 
 //Class definition
 
-class HelloClass 
+class HelloClass
 {
         // Declare a static property
         public static $greeting = "Hello, World! <br>";
@@ -5152,7 +5153,7 @@ $hello->sayHello(); // Hello, world
 
 <p>The keyword <code>self</code> in the above example means "the current class". It is never preceded by a dollar sign (<code>$</code>) and always followed by the <code>::</code> operator (e.g. <code>self::$name</code>).</p>
 				<p>The <code>self</code> keyword is different from the <code>this</code> keyword which means "the current object" or&nbsp; "the current instance of a class". The <code>this</code> keyword is always preceded by a dollar sign (<code>$</code>) and followed by the <code>-&gt;</code> operator (e.g. <code>$this-&gt;name</code>).</p>
-				
+
 
 <p class="notes"> <strong>Note:</strong> Since static methods can be called without an instance of a class (i.e. object), the pseudo-variable <code>$this</code> is not available inside the method declared as static.</p>
 
@@ -5189,7 +5190,7 @@ $hello->sayHello(); // Hello, world
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 echo "The full path of this file : " . __FILE__;
 
@@ -5203,7 +5204,7 @@ echo "The full path of this file : " . __FILE__;
 <p>The  <code>__DIR__</code> constant returns the directory of the file. If used inside an include, the directory of the included file is returned.</p>
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 echo "The full path of this file : " . __DIR__;
 
@@ -5218,7 +5219,7 @@ echo "The full path of this file : " . __DIR__;
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 function testFunction(){
     echo "The function name is : " . __FUNCTION__;
 }
@@ -5235,7 +5236,7 @@ testFunction();// Displays: The function name is - testFunction
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 class SampleClass{
     public function getClassName(){
         return __CLASS__;
@@ -5254,7 +5255,7 @@ echo $obj->getClassName();
 <p>The <code>__METHOD__</code> constant returns the name of the current class method.</p>
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 class Sample2{
         public function myMethod(){
@@ -5335,7 +5336,7 @@ echo $obj->getNamespace(); // Displays: MyNamespace
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 // An associative array
 
 $marks = array(
@@ -5359,7 +5360,7 @@ echo json_encode($marks);
 <h5 class="example">Example</h5>
 
 
-<?php 
+<?php
 
 $colors = array("Cyan", "Magenta", "Yellow", "Black");
 
@@ -5376,7 +5377,7 @@ echo json_encode($colors);
 <?php
 // An indexed array
 $colors = array("Red", "Green", "Blue", "Orange");
- 
+
 echo json_encode($colors, JSON_FORCE_OBJECT);
 ?>
 
@@ -5394,7 +5395,7 @@ echo json_encode($colors, JSON_FORCE_OBJECT);
 <?php
 // Store JSON data in a PHP variable
 $json = '{"Peter":65,"Harry":80,"John":78,"Clark":90}';
- 
+
 var_dump(json_decode($json));
 ?>
 
@@ -5406,12 +5407,12 @@ var_dump(json_decode($json));
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 //Store JSON data in a PHP variable
 
 $json = '{"Peter":65,"Harry":80,"John":78,"Clark":90}';
 
-var_dump(json_decode($json, true)); 
+var_dump(json_decode($json, true));
 
 ?>
 <br>
@@ -5423,7 +5424,7 @@ var_dump(json_decode($json, true));
 <?php
 // Assign JSON encoded string to a PHP variable
 $json = '{"Peter":65,"Harry":80,"John":78,"Clark":90}';
- 
+
 // Decode JSON data to PHP associative array
 $arr = json_decode($json, true);
 // Access values from the associative array
@@ -5431,7 +5432,7 @@ echo $arr["Peter"] . "<br>";  // Output: 65
 echo $arr["Harry"] . "<br>";  // Output: 80
 echo $arr["John"] . "<br>";   // Output: 78
 echo $arr["Clark"] . "<br><br>";  // Output: 90
- 
+
 // Decode JSON data to PHP object
 $obj = json_decode($json);
 // Access values from the returned object
@@ -5449,7 +5450,7 @@ echo $obj->Clark;   // Output: 90
 <h5 class="example">Example</h5>
 
 
-<?php 
+<?php
 // Assign JSON encoded string to a PHP variable
 $json = '{"Peter":65,"Harry":80,"John":78,"Clark":90}';
 
@@ -5488,12 +5489,12 @@ foreach($obj as $key=>$value){
 function printValues2($arr) {
     global $count;
     global $values;
-    
+
     // Check input is an array
     if(!is_array($arr)){
         die("ERROR: Input is not an array");
     }
-    
+
     /*
     Loop through array, if value is itself an array recursively call the
     function else add the value found to the output items array,
@@ -5507,11 +5508,11 @@ function printValues2($arr) {
             $count++;
         }
     }
-    
+
     // Return total count and values found in array
     return array('total' => $count, 'values' => $values);
 }
- 
+
 // Assign JSON encoded string to a PHP variable
 $json = '{
     "book": {
@@ -5527,14 +5528,14 @@ $json = '{
 }';
 // Decode JSON data into PHP associative array format
 $arr = json_decode($json, true);
- 
+
 // Call the function and print all the values
 $result = printValues2($arr);
 echo "<h3>" . $result["total"] . " value(s) found: </h3>";
 echo implode("<br>", $result["values"]);
- 
+
 echo "<hr>";
- 
+
 // Print a single value
 echo $arr["book"]["author"] . "<br>";  // Output: J. K. Rowling
 echo $arr["book"]["characters"][0] . "<br>";  // Output: Harry Potter
@@ -5570,7 +5571,7 @@ echo $arr["book"]["price"]["hardcover"] . "<br>";  // Output: $20.32
 							<tr>
 								<td><code>preg_match_all</code></td>
 								<td>Perform a global regular expression match.</td>
-							</tr>							
+							</tr>
 							<tr>
 								<td><code>preg_replace()</code></td>
 								<td>Perform a regular expression search and replace.</td>
@@ -5599,7 +5600,7 @@ echo $arr["book"]["price"]["hardcover"] . "<br>";  // Output: $20.32
 <p>Square brackets surrounding a pattern of characters are called a character class e.g. <code>[abc]</code>. A character class always matches a single character out of a list of specified characters that means the expression <code>[abc]</code> matches only a, b or c character.</p>
 				<p>Negated character classes can also be defined that match any character except those contained within the brackets. A negated character class is defined by placing a caret (<code>^</code>) symbol immediately after the opening bracket, like this <code>[^abc]</code>.</p>
 				<p>You can also define a range of characters by using the hyphen (<code>-</code>) character inside a character class, like <code>[0-9]</code>. Let's look at some examples of character classes:</p>
-                
+
                 <div>
 					<table class="table table-bordered">
 						<thead>
@@ -5644,7 +5645,7 @@ echo $arr["book"]["price"]["hardcover"] . "<br>";  // Output: $20.32
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 $pattern = "/ca[kf]e/";
 
 $text = "He was eating cake in the cafe.";
@@ -5798,7 +5799,7 @@ echo str_replace(" ", "-", $text);
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 $pattern = "/[\s,]+/";
 $text = "My favourite colors are red, green and blue";
 $parts = preg_split($pattern, $text);
@@ -5844,7 +5845,7 @@ foreach($parts as $part){
 $pattern = "/^J/";
 $names = array("Jhon Carter", "Clark Kent", "John Rambo");
 $matches = preg_grep($pattern, $names);
- 
+
 // Loop through matches array and display matched names
 foreach($matches as $match){
     echo $match . "<br>";
@@ -5891,7 +5892,7 @@ foreach($matches as $match){
 							</tr>
 						</tbody>
 					</table>
-				</div>				
+				</div>
 				<p>The following example will show you how to perform a global case-insensitive search using the <code>i</code> modifier and the PHP <code>preg_match_all()</code> function.</p>
 
 
@@ -5967,19 +5968,19 @@ function division($dividend, $divisor){
         echo "<p>$dividend / $divisor = $quotient</p>";
     }
 }
- 
+
 try{
     division(10, 2);
     division(30, -4);
     division(15, 0);
-    
+
     // If exception is thrown following line won't execute
     echo '<p>All divisions performed successfully.</p>';
 } catch(Exception $e){
     // Handle the exception
     echo "<p>Caught exception: " . $e->getMessage() . "</p>";
 }
- 
+
 // Continue execution
 echo "<p>Hello World!</p>";
 ?>
@@ -5994,7 +5995,7 @@ echo "<p>Hello World!</p>";
 					<li>The <code>catch</code> block typically catch the exception thrown within the <code>try</code> block and creates an object (<code>$e</code>) containing the exception information. The error message from this object can be retrieved using the Exception's <code>getMessage()</code> method.</li>
 				</ul>
 				<p>The PHP's Exception class also provides <code>getCode()</code>, <code>getFile()</code>, <code>getLine()</code> and <code>getTraceAsString()</code> methods that can be used to generate detailed debugging information.</p>
-                
+
 
 <br>
 
@@ -6002,30 +6003,30 @@ echo "<p>Hello World!</p>";
 <?php
 // Turn off default error reporting
 error_reporting(0);
- 
+
 try{
     $file = "somefile.txt";
-    
+
     // Attempt to open the file
     $handle = fopen($file, "r");
     if(!$handle){
         throw new Exception("Cannot open the file!", 5);
     }
-    
+
     // Attempt to read the file contents
     $content = fread($handle, filesize($file));
     if(!$content){
         throw new Exception("Could not read file!", 10);
     }
-    
+
     // Closing the file handle
     fclose($handle);
-    
+
     // Display file contents
     echo $content;
 } catch(Exception $e){
     echo "<h6>Caught Exception!</h6>";
-    echo "<p>Error message: " . $e->getMessage() . "</p>";    
+    echo "<p>Error message: " . $e->getMessage() . "</p>";
     echo "<p>File: " . $e->getFile() . "</p>";
     echo "<p>Line: " . $e->getLine() . "</p>";
     echo "<p>Error code: " . $e->getCode() . "</p>";
@@ -6052,20 +6053,20 @@ try{
 // Extending the Exception class
 class EmptyEmailException extends Exception {}
 class InvalidEmailException extends Exception {}
- 
+
 $email = "someuser@example..com";
- 
+
 try{
     // Throw exception if email is empty
     if($email == ""){
         throw new EmptyEmailException("<p>Please enter your E-mail address!</p>");
     }
-    
+
     // Throw exception if email is not valid
-    if(filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE) {           
+    if(filter_var($email, FILTER_VALIDATE_EMAIL) === FALSE) {
         throw new InvalidEmailException("<p><b>$email</b> is not a valid E-mail address!</p>");
     }
-    
+
     // Display success message if email is valid
     echo "<p>SUCCESS: Email validation successful.</p>";
 } catch(EmptyEmailException $e){
@@ -6177,7 +6178,7 @@ try{
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 
@@ -6210,15 +6211,15 @@ echo "Connected Successfully. Host info : " . mysqli_get_host_info($link);
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "");
- 
+
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
+
 // Print host information
 echo "Connect Successfully. Host info: " . mysqli_get_host_info($link);
- 
+
 // Close connection
 mysqli_close($link);
 ?>
@@ -6228,7 +6229,7 @@ mysqli_close($link);
 <h5>Object Oriented MySQL Connection</h5>
 
 <h5 class="example">Example</h5>
-<?php 
+<?php
 
 $mysqli = new mysqli("localhost", "root", "", "global");
 
@@ -6267,7 +6268,7 @@ $mysqli->close();
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 //create server connection with server details
 $conn = mysqli_connect("localhost", "root", "");
 
@@ -6342,7 +6343,7 @@ $mysqli->close();
 
 <h5 class="example">Example</h5>
 
-<?php 
+<?php
 
 //Server Connection
 
@@ -6352,7 +6353,7 @@ $conn = mysqli_connect("localhost", "root", "", "tppl");
 
 if ($conn === false) {
     die("ERROR : Could not connect db server . " . mysqli_connect_error());
-} 
+}
 
 // Attempt to create table query execution
 
@@ -6388,12 +6389,12 @@ mysqli_close($conn);
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $mysqli = new mysqli("localhost", "root", "", "demo");
- 
+
 // Check connection
 if($mysqli === false){
     die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
- 
+
 // Attempt create table query execution
 $sql = "CREATE TABLE persons(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -6407,7 +6408,7 @@ if($mysqli->query($sql) === true){
 } else{
     echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
 }
- 
+
 // Close connection
 $mysqli->close();
 ?>
@@ -6516,12 +6517,12 @@ $conn->close();
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "ganesh", "Ganesh$1", "demo");
- 
+
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
- 
+
 // Attempt insert query execution
 $sql = "INSERT INTO persons (first_name, last_name, email) VALUES
             ('John', 'Rambo', 'johnrambo@mail.com'),
@@ -6533,7 +6534,7 @@ if(mysqli_query($link, $sql)){
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
- 
+
 // Close connection
 mysqli_close($link);
 ?>
@@ -6651,17 +6652,17 @@ mysqli_close($conn);
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $mysqli = new mysqli("localhost", "ganesh", "Ganesh$1", "demo");
- 
+
 // Check connection
 if($mysqli === false){
     die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
- 
+
 // Escape user inputs for security
 $first_name = $mysqli->real_escape_string($_REQUEST['first_name']);
 $last_name = $mysqli->real_escape_string($_REQUEST['last_name']);
 $email = $mysqli->real_escape_string($_REQUEST['email']);
- 
+
 // Attempt insert query execution
 $sql = "INSERT INTO persons (first_name, last_name, email) VALUES ('$first_name', '$last_name', '$email')";
 if($mysqli->query($sql) === true){
@@ -6669,7 +6670,7 @@ if($mysqli->query($sql) === true){
 } else{
     echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
 }
- 
+
 // Close connection
 $mysqli->close();
 ?>
@@ -6702,7 +6703,7 @@ $mysqli->close();
 <h5 class="example">Example</h5>
 <p><code>INSERT INTO</code> persons (first_name, last_name, email)
 <code>VALUES</code> (:first_name, :last_name, :email);</p>
- 
+
 <p>The prepared statement execution consists of two stages: prepare and execute.</p>
 				<ul>
 					<li><strong>Prepare</strong> — At the prepare stage a SQL statement template is created and sent to the database server. The server parses the statement template, performs a syntax check and query optimization, and stores it for later use.</li>
@@ -6742,7 +6743,7 @@ if($stmt = mysqli_prepare($link, $sql)){
 
 
 
-/* set the parameter values and execute the 
+/* set the parameter values and execute the
 statement again to insert another row */
 
 $first_name = "Steve";
@@ -6760,7 +6761,7 @@ mysqli_stmt_execute($stmt);
 echo "Record inserted successfully.";
 
 }else{
-    echo "ERROR : Could not prepare query $sql" . mysqli_error($link); 
+    echo "ERROR : Could not prepare query $sql" . mysqli_error($link);
 }
 
 //Close statement
@@ -6782,41 +6783,41 @@ mysqli_close($link);
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $mysqli = new mysqli("localhost", "root", "", "demo");
- 
+
 // Check connection
 if($mysqli === false){
     die("ERROR: Could not connect. " . $mysqli->connect_error);
 }
- 
+
 // Prepare an insert statement
 $sql = "INSERT INTO persons (first_name, last_name, email) VALUES (?, ?, ?)";
- 
+
 if($stmt = $mysqli->prepare($sql)){
     // Bind variables to the prepared statement as parameters
     $stmt->bind_param("sss", $first_name, $last_name, $email);
-    
+
     /* Set the parameters values and execute
     the statement again to insert another row */
     $first_name = "Hermione";
     $last_name = "Granger";
     $email = "hermionegranger@mail.com";
     $stmt->execute();
-    
+
     /* Set the parameters values and execute
     the statement to insert a row */
     $first_name = "Ron";
     $last_name = "Weasley";
     $email = "ronweasley@mail.com";
     $stmt->execute();
-    
+
     echo "Records inserted successfully.";
 } else{
     echo "ERROR: Could not prepare query: $sql. " . $mysqli->error;
 }
- 
+
 // Close statement
 $stmt->close();
- 
+
 // Close connection
 $mysqli->close();
 ?>
@@ -6903,6 +6904,571 @@ $mysqli->close();
 
 </div>
 
+
+<br>
+<br>
+
+<hr>
+<h4>PHP MySQL Last Inserted ID</h4>
+<h5>How to Get the ID of Last Inserted Row</h5>
+<p>In the PHP MySQL insert chapter you've learnt MySQL automatically generate an unique ID for the AUTO_INCREMENT column each time you insert a new record or row into the table. However, there are certain situations when you need that automatically generated ID to insert it into a second table. In these situations you can use the PHP <code>mysqli_insert_id()</code> function to retrieve the most recently generated ID, as shown in the upcoming example.</p>
+
+
+<h5 class="example">Example</h5>
+
+<?php
+//server connection
+
+$link = mysqli_connect("localhost", "root", "", "demo");
+
+//check connection
+if ($link === false) {
+      die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+//atempt to insert query
+
+$sql = "INSERT INTO persons (first_name, last_name, email) VALUES ('Revanth', 'Kumar', 'reavanth@gmail.com')";
+        if(mysqli_query($link, $sql)){
+                //obtain last inserted id
+
+                $last_id = mysqli_insert_id($link);
+                echo "Record inseted successfully. Last inserte ID is: " . $last_id;
+        } else{
+        echo "ERROR: Could not able to execute $sql . " . mysqli_error($link);
+        }
+
+        //close connection
+        mysqli_close($link);
+
+
+?>
+
+
+<br>
+<br>
+
+<hr>
+
+<h4>PHP MySQL SELECT Query</h4>
+<h5>Selecting Data From Database Tables</h5>
+<p>So far you have learnt how to create database and table as well as inserting data. Now it's time to retrieve data what have inserted in the preceding tutorial. The SQL <code>SELECT</code> statement is used to select the records from database tables. Its basic syntax is as follows:</p>
+
+<p class="codebox"><code>SELECT</code> <i class="text text-secondary">column1_name, column2_name, columnN_name</i> <code>FROM</code> <i class="text text-secondary">table_name;</i></p>
+
+<p>Let's make a SQL query using the <code>SELECT</code> statement, after that we will execute this SQL query through passing it to the PHP <code>mysqli_query()</code> function to retrieve the table data.</p>
+
+<p>The PHP code in the following example selects all the data stored in the persons table (using the asterisk character (<code>*</code>) in place of column name selects all the data in the table).</p>
+
+
+<h5 class="example">Example</h5>
+
+<?php
+//server connection
+
+require_once "dbconnection.php";
+
+
+// SQL Select query execution
+
+$sql = "SELECT * FROM persons";
+
+if($result = mysqli_query($link, $sql)){
+            if(mysqli_num_rows($result)>0){
+                echo "<table class=\"table\">";
+                echo "<thead class=\"thead-dark\">";
+                    echo "<tr class = \"text text-info\">";
+                        echo "<th>id</th>";
+                        echo "<th>first_name</th>";
+                        echo "<th>last_name</th>";
+                        echo "<th>email</th>";
+                    echo "<tr>";
+                    echo "</thead>";
+                while($row = mysqli_fetch_array($result)){
+                    echo "<tr>";
+                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td>" . $row['first_name'] . "</td>";
+                    echo "<td>" . $row['last_name'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                echo "</tr>";
+                }
+                echo "</table>";
+
+                    //free result set
+
+                    mysqli_free_result($result);
+
+            } else{
+                echo "No records found";
+            }
+
+} else{
+    echo "ERROR: Could not able to execute $sql . " . mysqli_error($link);
+}
+
+//close connection
+
+mysqli_close($link);
+
+?>
+
+
+<br>
+<br>
+
+
+
+
+<h5 class="example">Object Oriented Example</h5>
+<?php
+//Server connections
+$mysqli = new mysqli("localhost", "root", "", "demo");
+
+// Check connection
+if($mysqli === false){
+    die("ERROR: Could not connect. " . $mysqli->connect_error);
+}
+
+// Attempt select query execution
+$sql = "SELECT * FROM persons";
+if($result = $mysqli->query($sql)){
+    if($result->num_rows > 0){
+        echo "<table class=\"table\">";
+        echo "<thead class=\"thead-dark\">";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+            echo "</thead>";
+        while($row = $result->fetch_array()){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        // Free result set
+        $result->free();
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
+}
+
+// Close connection
+$mysqli->close();
+?>
+
+
+
+<br>
+
+<h5>Explanation of Code (Procedural style)</h5>
+
+<p>In the example above, the data returned by the <code>mysqli_query()</code> function is stored in the <code>$result</code> variable. Each time <code>mysqli_fetch_array()</code> is invoked, it returns the next row from the result set as an array. The <a href="https://www.tutorialrepublic.com/php-tutorial/php-loops.php" target="_blank">while loop</a> is used to loops through all the rows in the result set. Finally the value of individual field can be accessed from the row either by passing the field index or field name to the <code>$row</code> variable like <code>$row['id']</code> or <code>$row[0]</code>, <code>$row['first_name']</code> or <code>$row[1]</code>, <code>$row['last_name']</code> or <code>$row[2]</code>, and <code>$row['email']</code> or <code>$row[3]</code>.</p>
+				<p>If you want to use the <a href="https://www.tutorialrepublic.com/php-tutorial/php-loops.php" target="_blank"><code>for</code> loop</a> you can obtain the loop counter value or the number of rows returned by the query by passing the <code>$result</code> variable to the <code>mysqli_num_rows()</code> function. This loop counter value determines how many times the loop should run.</p>
+
+
+<br>
+<br>
+
+<hr>
+
+<h4>PHP MySQL WHERE Clause</h4>
+<h5>Filtering the Records</h5>
+<p>The <code>WHERE</code> clause is used to extract only those records that fulfill a specified condition.</p>
+
+<h5 class="example">Syntax</h5>
+<p class="codebox"><code>SELECT</code> column_name(s) <code>FROM</code> table_name <code>WHERE</code>column_name operator value</p>
+
+<p>Let's make a SQL query using the <code>WHERE</code> clause in <code>SELECT</code> statement, after that we'll execute this query through passing it to the PHP <code>mysqli_query()</code> function to get the filtered data.</p>
+
+<h5 class="example">Example</h5>
+
+
+<?php
+
+
+//DB Connection
+
+require "dbconnection.php";
+
+
+// Attempt select query execution
+$sql = "SELECT * FROM persons WHERE first_name='harry'";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table class=\"table\">";
+        echo "<thead class=\"thead-dark\">";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        echo "</thead>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        // Close result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+
+// Close connection
+mysqli_close($link);
+
+?>
+
+
+<br>
+<br>
+
+<hr>
+
+<h4>PHP MySQL LIMIT Clause</h4>
+<h5>Limiting Result Sets</h5>
+<p>The LIMIT clause is used to constrain the number of rows returned by the SELECT statement. This feature is very helpful for optimizing the page loading time as well as to enhance the readability of a website. For example you can divide the large number of records in multiple pages using pagination, where limited number of records will be loaded on every page from the database when a user request for that page by clicking on pagination link.</p>
+
+<h5 class="example">Syntax</h5>
+
+<p class="codebox">
+<code>SELECT</code> column_name(s) <code>FROM</code> table_name <code>LIMIT</code> row_offset, row_count;
+</p>
+
+<p>The <code>LIMIT</code> clause accepts one or two parameters which must be a nonnegative integer:</p>
+				<ul>
+					<li>When two parameters are specified, the first parameter specifies the offset of the first row to return i.e. the starting point, whereas the second parameter specifies the number of rows to return. The offset of the first row is 0 (not 1).</li>
+					<li>Whereas, when only one parameter is given, it specifies the maximum number of rows to return from the beginning of the result set.</li>
+				</ul>
+				<p>For example, to retrieve the first three rows, you can use the following query:</p>
+                <p class="codebox"><code>SELECT</code> * <code>FROM</code> persons <code>LIMIT</code> 3;</p>
+
+				<p>To retrieve the rows 2-4 (inclusive) of a result set, you can use the following query:</p>
+
+                <p class="codebox"><code>SELECT</code> * <code>FROM</code> persons <code>LIMIT</code> 1, 3;</p>
+
+				<p>Let's make a SQL query using the <code>LIMIT</code> clause in <code>SELECT</code> statement, after that we will execute this query through passing it to the PHP <code>mysqli_query()</code> function to get the limited number of records. Consider the following <i>persons</i> table inside the <i>demo</i> database:</p>
+
+
+<h5 class="example">Example</h5>
+
+<?php
+
+
+//DB Connection
+
+require "dbconnection.php";
+
+
+// Attempt select query execution
+$sql = "SELECT * FROM persons LIMIT 3";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table class=\"table\">";
+        echo "<thead class=\"thead-dark\">";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        echo "</thead>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        // Close result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+
+// Close connection
+mysqli_close($link);
+
+?>
+
+
+<br>
+<br>
+
+<hr>
+<h4>PHP MySQL ORDER BY Clause</h4>
+<h5>Ordering the Result Set</h5>
+
+<p>The <code>ORDER BY</code> clause can be used in conjugation with the <code>SELECT</code> statement to see the data from a table ordered by a specific field. The <code>ORDER BY</code> clause lets you define the field name to sort against and the sort direction either ascending or descending.</p>
+
+<h5 class="example">Syntax</h5>
+<p class="codebox"><code>SELECT</code> column_name(s)<code>FROM</code> table_name <code>ORDER BY</code> column_name(s) <code>ASC</code>|<code>DESC</code></p>
+
+
+<p>Let's make a SQL query using the <code>ORDER BY</code> clause in <code>SELECT</code> statement, after that we will execute this query through passing it to the PHP <code>mysqli_query()</code> function to get the ordered data. Consider the following persons table inside the demo database:</p>
+
+
+<h5 class="example">Example</h5>
+<p>The PHP code in the following example selects all rows from the persons table and sorts the result by the <i>first_name</i> column in the alphabetically ascending order.</p>
+
+
+<?php
+
+
+//DB Connection
+
+require "dbconnection.php";
+
+
+// Attempt select query execution
+$sql = "SELECT * FROM persons ORDER BY first_name";
+if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){
+        echo "<table class=\"table\">";
+        echo "<thead class=\"thead-dark\">";
+            echo "<tr>";
+                echo "<th>id</th>";
+                echo "<th>first_name</th>";
+                echo "<th>last_name</th>";
+                echo "<th>email</th>";
+            echo "</tr>";
+        echo "</thead>";
+        while($row = mysqli_fetch_array($result)){
+            echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['first_name'] . "</td>";
+                echo "<td>" . $row['last_name'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        // Close result set
+        mysqli_free_result($result);
+    } else{
+        echo "No records matching your query were found.";
+    }
+} else{
+    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+}
+
+// Close connection
+mysqli_close($link);
+
+?>
+<hr>
+
+<br>
+
+<p class="tip"<strong>Tip:</strong> By default the <code>ORDER BY</code> clause sort the results in ascending order. If you want to sort the records in a descending order, you can use the <code>DESC</code> keyword.</p>
+
+
+
+<br>
+<br>
+
+<hr>
+
+<h4>PHP MySQL UPDATE Query</h4>
+<h5>Updating Database Table Data</h5>
+
+<p>The <code>UPDATE</code> statement is used to change or modify the existing records in a database table. This statement is typically used in conjugation with the <code>WHERE</code> clause to apply the changes to only those records that matches specific criteria.</p>
+
+
+<h5 class="example">Syntax</h5>
+
+<p class="codebox"><code>UPDATE</code> table_name <code>SET</code> coloumn1=value, column2=value2, ... <code>WHERE</code> column_name=some_value</p>
+
+<p>Let's make a SQL query using the <code>UPDATE</code> statement and <code>WHERE</code> clause, after that we will execute this query through passing it to the PHP <code>mysqli_query()</code> function to update the tables records. Consider the following persons table inside the demo database:</p>
+
+
+<h5 class="example">Example</h5>
+
+<p>The PHP code in the following example will update the email address of a person in the persons table whose id is equal to 1.</p>
+
+<?php
+//server connection
+
+require "dbconnection.php";
+
+
+//SQL query attempt
+
+$sql = "UPDATE persons SET email='peterparker_new@mail.com' WHERE id=3";
+
+if(mysqli_query($link, $sql)){
+            echo "Records were updated successfully";
+} else{
+    echo "ERROR : Could not able to execute $sql.". mysqli_error($link);
+}
+
+//close connection
+
+mysqli_close($link);
+
+
+?>
+
+
+
+<br>
+<br>
+
+<h5 class="example">Object Oriented Example</h5>
+<?php
+/* Attempt MySQL server connection. Assuming you are running MySQL
+server with default setting (user 'root' with no password) */
+$mysqli = new mysqli("localhost", "root", "", "demo");
+
+// Check connection
+if($mysqli === false){
+    die("ERROR: Could not connect. " . $mysqli->connect_error);
+}
+
+// Attempt update query execution
+$sql = "UPDATE persons SET email='johnnew@gmail.com' WHERE id=1";
+if($mysqli->query($sql) === true){
+    echo "Records were updated successfully.";
+} else{
+    echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
+}
+
+// Close connection
+$mysqli->close();
+?>
+
+<br>
+<br>
+
+<p class="warning"><strong>Warning:</strong> The <code>WHERE</code> clause in the <code>UPDATE</code> statement specifies which record or records should be updated. If you omit the <code>WHERE</code> clause, all records will be updated.</p>
+
+
+
+<br>
+<br>
+
+<hr>
+<h4>PHP MySQL DELETE Query</h4>
+<h5>Deleting Database Table Data</h5>
+<p>Just as you insert records into tables, you can delete records from a table using the SQL <code>DELETE</code> statement. It is typically used in conjugation with the <code>WHERE</code> clause to delete only those records that matches specific criteria or condition.</p>
+
+<h5 class="example">Syntax</h5>
+
+<p class="codebox"><Code>DELETE FROM</Code> table_name <code>WHERE</code> column_name=some_value
+</p>
+
+<p>Let's make a SQL query using the <code>DELETE</code> statement and <code>WHERE</code> clause, after that we will execute this query through passing it to the PHP <code>mysqli_query()</code> function to delete the tables records. Consider the following persons table inside the demo database:</p>
+
+<h5 class="example">Example</h5>
+
+<?php
+
+//server connection
+
+require "dbconnection.php";
+
+//SQL query execute
+
+$sql = "DELETE FROM persons WHERE first_name='test'";
+
+    if(mysqli_query($link, $sql)){
+            echo "Record deleted.";
+    } else{
+        echo "ERROR: Could not delete $sql" . mysqli_error($link);
+    }
+
+    //Close connection
+    mysqli_close($link);
+
+?>
+
+<br>
+<br>
+
+<p class="warning"><strong>Warning:</strong> The <code>WHERE</code> clause in the <code>DELETE</code> statement specifies which record or records should be deleted. If you omit the <code>WHERE</code> clause, all records will be deleted.
+</p>
+
+
+<br>
+<br>
+
+<h4>PHP MySQL CRUD Application</h4>
+<h5>What is CRUD</h5>
+
+<p>CRUD is an acronym for <strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, and <strong>D</strong>elete. CRUD operations are basic data manipulation for database. We've already learned how to perform create (i.e. insert), read (i.e. select), update and delete operations in previous chapters. In this tutorial we'll create a simple PHP application to perform all these operations on a MySQL database table at one place.</p>
+<p>Click Below Link for CRUD Application Example</p>
+
+
+
+<a href="./crud/index.php" target="_blank">Click Here</a>
+
+
+<br>
+<br>
+
+<hr>
+<h4>PHP MySQL Ajax Live Search</h4>
+
+<h5>Ajax Live Database Search</h5>
+
+<p>You can create a simple live database search functionality utilizing the Ajax and PHP, where the search results will be displayed as you start typing some character in search input box.</p>
+
+<p>In this tutorial we're going to create a live search box that will search the countries table and show the results asynchronously. But, first of all we need to create this table.</p>
+
+
+<a href="./ajax" target="_blank">Cick</a> her for example
+
+
+
+<br>
+<br>
+
+<hr>
+
+<h4>PHP MySQL Login System</h4>
+<h5>Implementing User Authentication Mechanism</h5>
+<p>User authentication is very common in modern web application. It is a security mechanism that is used to restrict unauthorized access to member-only areas and tools on a site.</p>
+<p>In this tutorial we'll create a simple registration and login system using the PHP and MySQL. This tutorial is comprised of two parts: in the first part we'll create a user registration form, and in the second part we'll create a login form, as well as a welcome page and a logout script.</p>
+
+<h5>Object Oriented PHP Method Login System</h5>
+<a href="./login" target="_blank">Click</a> here for Complete login system Example.
+
+<br>
+<br>
+
+<h5 class="example">Steps</h5>
+<ul>
+    <li>Create Database '<code>demo</code>'</li>
+    <li>Create table '<code>users</code>'</li>
+    <li>Create database connection page '<code>config.php</code>'</li>
+    <li>Create page '<code>register.php</code>'</li>
+    <li>Create page '<code>login.php</code>'</li>
+    <li>Create page '<code>welcome.php</code>'</li>
+    <li>Create page '<code>logout.php</code>'</li>
+    <li>Adding '<code>password reset</code>' feature</li>
+
+</ul>
+
+<p>For Complete Login System Refference <a href="./login_system_ref" target="_blank">Click</a> here</p>
 
 
 
