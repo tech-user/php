@@ -14,5 +14,4 @@ if ($link === true) {
       die("ERROR: Could not connect. " . mysqli_connect_error());
 } 
 
-
 ?>
