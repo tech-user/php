@@ -3,7 +3,7 @@
 include("db_connection.php");
  
     // Design initial table header 
-$data = '<table class="table table-bordered">
+$data = '<table class="table table-bordered table-striped">
                         <tr>
                             <th>No.</th>
                             <th>First Name</th>
@@ -29,10 +29,10 @@ if (mysqli_num_rows($result) > 0) {
                 <td>' . $row['last_name'] . '</td>
                 <td>' . $row['email'] . '</td>
                 <td>
-                    <button onclick="GetUserDetails(' . $row['id'] . ')" class="btn btn-warning">Update</button>
+                    <button onclick="GetUserDetails(' . $row['id'] . ')" class="btn btn-sm btn-outline-warning">Update</button>
                 </td>
                 <td>
-                    <button onclick="DeleteUser(' . $row['id'] . ')" class="btn btn-danger">Delete</button>
+                    <button onclick="DeleteUser(' . $row['id'] . ')" class="btn btn-sm btn-outline-danger">Delete</button>
                 </td>
             </tr>';
         $number++;

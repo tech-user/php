@@ -24,7 +24,7 @@
         <h4 class="text text-info">PHP and MySQL CRUD Operations</h4>
 
         <div class="float-right">
-         <button class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New</button>
+         <button class="btn btn-sm btn-outline-success" data-toggle="modal" data-target="#add_new_record_modal">+ Add New</button>
         </div>
 
 
@@ -54,7 +54,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text text-secondary" id="myModalLabel">Add New Record</h5>
+                    <h5 class="modal-title text text-success" id="myModalLabel">Add New Record</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                     
                 </div>
@@ -80,8 +80,8 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary" onclick="addRecord()">Add Record</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-sm btn-outline-success" onclick="addRecord()">Add Record</button>
                 </div><!-- footer end-->
 
             </div>
@@ -90,40 +90,43 @@
 
 </div><!-- modal end -->
 
-<!-- Modal - Update user details -->
+<!-- Modal - Update User details -->
 <div class="modal fade" id="update_user_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <h4 class="modal-title" id="myModalLabel">Update</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></span></button>
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="myModalLabel">Update</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                
+            </div>
+            <div class="modal-body">
+ 
+                <div class="form-group">
+                    <label for="update_first_name">First Name</label>
+                    <input type="text" id="update_first_name" placeholder="First Name" class="form-control"/>
+                </div>
+ 
+                <div class="form-group">
+                    <label for="update_last_name">Last Name</label>
+                    <input type="text" id="update_last_name" placeholder="Last Name" class="form-control"/>
+                </div>
+ 
+                <div class="form-group">
+                    <label for="update_email">Email Address</label>
+                    <input type="text" id="update_email" placeholder="Email Address" class="form-control"/>
+                </div>
+ 
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-sm btn-outline-primary" onclick="UpdateUserDetails()" >Save Changes</button>
+                <input type="hidden" id="hidden_user_id">
+            </div>
+
         </div>
-        <div class="modal-body">
-            <div class="form-group">
-                <label for="update_first_name">First Name</label>
-                <input type="text" id="update_first_name" placeholder="First Name" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="update_last_name">First Name</label>
-                <input type="text" id="update_last_name" placeholder="Last Name" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label for="update_email">Email Address</label>
-                <input type="text" id="update_email" placeholder="Email Address" class="form-control"/>
-            </div>
-
-        </div><!-- modal body end-->
-
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" onclick="UpdateUserDetails()" >Save Changes</button>
-            <input type="hidden" id="hidden_user_id">
-        </div>
-
     </div>
-
 </div>
+<!-- // Modal -->
 
 
 
