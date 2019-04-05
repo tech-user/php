@@ -1,5 +1,5 @@
 <?php
-    require_once("encdec_paytm.php");
+    //require_once("encdec_paytm.php");
     define("merchantMid", "rxazcv89315285244163");
     // Key in your staging and production MID available in your dashboard
     define("merchantKey", "gKpu7IKaLSbkchFS");
@@ -26,7 +26,7 @@
     $paytmParams["WEBSITE"] = website;
     $paytmParams["INDUSTRY_TYPE_ID"] = industryTypeId;
     $paytmParams["CALLBACK_URL"] = callbackUrl;
-    $paytmChecksum = getChecksumFromArray($paytmParams, merchantKey);
+    //$paytmChecksum = getChecksumFromArray($paytmParams, merchantKey);
     $transactionURL = "https://securegw-stage.paytm.in/theia/processTransaction";
     // $transactionURL = "https://securegw.paytm.in/theia/processTransaction"; // for production
 ?>

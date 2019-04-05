@@ -15,8 +15,3 @@ class Customer{
 
 
 }
-
-
-
-
-?>

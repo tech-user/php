@@ -8,7 +8,7 @@ if (isset($_POST["id"]) && !empty($_POST["id"])) {
 
 
    //SQL query delete statement
-   $sql = "DELETE FROM employees WHERE id = ?";
+   $sql = "DELETE FROM emp WHERE id = ?";
 
    if ($stmt = mysqli_prepare($link, $sql)) {
          //bind variables to prepared statement as parameters
