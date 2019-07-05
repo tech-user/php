@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: administrator
- * Date: 2018-12-18
- * Time: 14:35
- */
+
 
 require 'classes/Animal.php';
 require 'classes/cow.php';
