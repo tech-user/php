@@ -190,6 +190,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                     </div> <!-- page header end-->
                     
+                    
                     <?php
                     // Include config file
                     require_once "config.php";

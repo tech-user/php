@@ -8,10 +8,12 @@
         display: inline-block;
         text-align: center;
         margin: 0 15px;
+        border: thin solid #c0c0c0;
     }
 </style>
 </head>
 <body>
+    
     <?php
     // Array containing sample image file names
     $images = array("11.png", "bokey.png");

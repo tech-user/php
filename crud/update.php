@@ -62,9 +62,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             } else{
                 echo "Something went wrong. Please try again later.";
             }
+        
         }
-         
-        // Close statement
+                 // Close statement
         mysqli_stmt_close($stmt);
     }
     
