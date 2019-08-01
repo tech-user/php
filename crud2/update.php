@@ -70,6 +70,8 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     
     // Close connection
     mysqli_close($link);
+
+
 } else{
     // Check existence of id parameter before processing further
     if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
@@ -77,7 +79,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $id =  trim($_GET["id"]);
         
         // Prepare a select statement
-        $sql = "SELECT * FROM employees WHERE id = ?";
+        $sql = "SELECT * FROM emp WHERE id = ?";
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -106,10 +108,11 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
+          
+             // Close statement
+         mysqli_stmt_close($stmt); 
         }
-        
-        // Close statement
-        mysqli_stmt_close($stmt);
+         
         
         // Close connection
         mysqli_close($link);
