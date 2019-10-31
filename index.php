@@ -6182,7 +6182,7 @@ try{
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 
-$conn = mysqli_connect("localhost", "ganesh", "Ganesh$1", "global");
+$conn = mysqli_connect("localhost", "admin", "Admin@123", "global");
 
 //Check connection
 
@@ -6267,6 +6267,7 @@ $mysqli->close();
 
 
 <h5 class="example">Example</h5>
+
 
 <?php
 //create server connection with server details
@@ -6474,7 +6475,7 @@ mysqli_close($link);
 <?php
 
 // server connections
-$conn = new mysqli("localhost", "ganesh", "Ganesh$1", "demo");
+$conn = new mysqli("localhost", "root", "", "demo");
 
 //check connection
 
