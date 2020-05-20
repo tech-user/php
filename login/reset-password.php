@@ -1,12 +1,16 @@
 <?php
+
 //session start
 session_start();
+
+
 
 // Check if the user is logged in, if not then redirect to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
       header("location: index.php");
       exit;
 }
+
 
 //include db config file
 require_once "config.php";
@@ -15,6 +19,8 @@ require_once "config.php";
 //define variables and initialize with empty values
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
+
+
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -39,12 +45,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
          }
       }
 
+
+
       //SQL update query
       if (empty($new_password_err) && empty($confirm_password_err)) {
-            //Prepare an update statement
+            
+         //Prepare an update statement
             $sql = "UPDATE users SET password = ? WHERE id = ? ";
 
             if($stmt = $mysqli->prepare($sql)){
+
                // Bind variables to the prepared statement as parameters
                $stmt->bind_param("si", $param_password, $param_id);
 
@@ -54,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                // Attempt to execute the prepared statement
                if($stmt->execute()){
+                  
                   // Password updated successfully. Destroy the session, and redirect to login page
                   session_destroy();
                   header("location: index.php");
